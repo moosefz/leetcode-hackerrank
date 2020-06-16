@@ -1,2 +1,2 @@
 # leetcode-hackerrank
-Code for leetcode/hackerrank problems
+Code for leetcode/hackerrank problems - completed using JavaScript.
