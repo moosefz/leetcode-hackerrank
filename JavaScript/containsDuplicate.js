@@ -31,4 +31,21 @@ var containsDuplicate2 = nums => {
     return true;
 }
 
+// using JS objects
+var containsDuplicate3 = nums => {
+    let visitedNums = {};
+
+    for(let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+
+        if(visitedNums[num]) { // duplicate found
+            return true;
+        } else { // add to object
+            visitedNums[num] = true;
+        }
+    }
+
+    return false;
+}
+
 console.log(containsDuplicate([1,2,3,1]));
