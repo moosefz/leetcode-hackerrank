@@ -24,16 +24,31 @@ function reverseString2(arr) {
     console.log(revStr);
 }
 
-console.log(reverseString(string));
 
 // quicker way - strictly JS
 function reverseString3(str) {
     return str.split('').reverse().join('');
 }
 
-console.log(reverseString3("My name is moose"));
 
 // one liner using ES6+
 const reverse4 = str => str.split('').reverse().join('');
 
-console.log(reverse4("Hello there"));
+// universal O(1) space complexity solution - in-place
+function reverseString4(s) {
+    let start = 0;
+    let end = s.length-1;
+
+    for(let i = 0; i < s.length/2; i++) {
+        let tmp = s[end];
+
+        //swap
+        s[end] = s[start];
+        s[start] = tmp;
+
+        start++;
+        end--;
+    }
+
+    return s;
+}
