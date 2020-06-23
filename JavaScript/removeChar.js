@@ -1,4 +1,4 @@
-// universal application
+// universal application - O(n) time/space
 const removeChar = (str, c) => {
 
     let strNew = str.split("");
@@ -15,7 +15,7 @@ const removeChar = (str, c) => {
     return str;
 }
 
-// js application
+// js application - O(n) time, O(1) space
 const removeCharJS = (str, repl) => {
     return str.split(repl).join("");
 }
